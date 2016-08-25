@@ -4,7 +4,9 @@
   "description": "c addons for node",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "install": "npm install node-gyp -g",
+    "build": "node-gyp build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/willworks/nodec/issues"
   },
-  "homepage": "https://github.com/willworks/nodec#readme"
+  "homepage": "https://github.com/willworks/nodec#readme",
+  "dependencies": {
+    "node-gyp": "^3.4.0"
+  }
 }

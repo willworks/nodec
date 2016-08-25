@@ -48,7 +48,7 @@ namespace main {
         // 需要返回的v8对象
         Local<Object> v8Obj = Object::New(isolate);
         // 取得函数的指针
-        FunctionCallback out_cb = cb;
+        // FunctionCallback out_cb = cb;
 
         // 给v8对象设置一个键名为key值为111的字段
         v8Obj->Set(String::NewFromUtf8(isolate,"key"),Integer::New(isolate,111));
@@ -65,7 +65,8 @@ namespace main {
     }
 
     void ARR(const FunctionCallbackInfo<Value> &args){
-        Isolate* isolate = args.GetIsolate();
+        // Get the default Isolate created at startup.
+        Isolate * isolate = args.GetIsolate();
         // Local<Array>tArr = Local<Array>::Cast(args[0]);
         Local<Value> val(args[0]);
         //过渡型变量。作用:获取JS传过来的数组[ , , ]的length()

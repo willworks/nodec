@@ -1,4 +1,4 @@
-# nodec
+### nodec [![Build Status](https://travis-ci.org/willworks/nodec.svg?branch=master)](https://travis-ci.org/willworks/nodec)
 c addons for node
 
 #### node-gyp

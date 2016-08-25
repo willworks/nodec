@@ -1,5 +1,9 @@
 language: node_js
 node_js: v4.5.0
 
+install:
+  - npm run install
+
 script:
-  - npm test
+  - npm run build
+  - npm run test
