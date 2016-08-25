@@ -66,8 +66,19 @@ namespace main {
 
     void ARR(const FunctionCallbackInfo<Value> &args){
         Isolate* isolate = args.GetIsolate();
-        Local<Array>tArr = Local<Array>::Cast(args[0]);
-        args.GetReturnValue().Set(tArr->Get(0)->NumberValue());
+        // Local<Array>tArr = Local<Array>::Cast(args[0]);
+        Local<Value> val(args[0]);
+        //过渡型变量。作用:获取JS传过来的数组[ , , ]的length()
+        Local<Array> arr = val->ToObject()->GetOwnPropertyNames();
+
+        uint32_t jsArrayLength = arr->Length();
+        for (int i = 0; i < (int)jsArrayLength; i++)
+        {
+            String::Utf8Value arrIndexVarU8(val->ToObject()->Get(i)->ToString());
+            char *arrIndexVarChar = *arrIndexVarU8 ;
+            printf("数组[%d]是: %s\n",i, arrIndexVarChar);
+        }
+        // args.GetReturnValue().Set(tArr->Get(0)->NumberValue());
     }
 
     void FUNC(const FunctionCallbackInfo<Value> &args){
