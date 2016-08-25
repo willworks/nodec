@@ -95,7 +95,7 @@ INCS_Release := \
 	-I/Users/hanjin.zhj/.node-gyp/4.5.0/deps/v8/include
 
 OBJS := \
-	$(obj).target/$(TARGET)/main.o
+	$(obj).target/$(TARGET)/src/main.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)

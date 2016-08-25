@@ -3,7 +3,7 @@
     {
       'target_name': 'main',
       'sources': [
-        'main.cc'
+        'src/main.cc'
       ],
       'dependencies': [
       ]
