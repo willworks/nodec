@@ -1,0 +1,25 @@
+{
+  "name": "nodec",
+  "version": "1.0.0",
+  "description": "c addons for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willworks/nodec.git"
+  },
+  "keywords": [
+    "c",
+    "node"
+  ],
+  "author": "kevin.zhong",
+  "license": "MIT",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/willworks/nodec/issues"
+  },
+  "homepage": "https://github.com/willworks/nodec#readme"
+}
