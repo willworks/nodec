@@ -4,8 +4,7 @@
   "description": "c addons for node",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
-    "install": "node-gyp rebuild"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
