@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "install": "npm install node-gyp -g",
+    "install": "npm install node-gyp@v3.4.0 -g",
     "configure": "node-gyp configure",
     "build": "node-gyp build"
   },

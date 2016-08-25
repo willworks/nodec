@@ -105,4 +105,4 @@ namespace main {
 
     NODE_MODULE(addon, init)
 
-}  // namespace main
+};  // namespace main
